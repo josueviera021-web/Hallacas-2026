@@ -1,0 +1,244 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hallacas 2026 - REV01</title><style>
+:root{font-family:system-ui,Arial;color:#263329;background:#f5f5ef}*{box-sizing:border-box}body{margin:0}header{background:#204b37;color:white;padding:23px max(20px,calc((100vw - 1150px)/2));}header h1{margin:0;font-size:28px}header p{margin:5px 0 0;color:#d4e8d9}main{max-width:1150px;margin:20px auto;padding:0 14px}nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}button,.btn{background:#236947;color:white;border:0;border-radius:9px;padding:10px 14px;cursor:pointer;font-size:14px;font-weight:600}button:hover{filter:brightness(.94)}button.secondary{background:#e4ede5;color:#204b37}button.danger{background:#a33132}button:disabled{opacity:.5}nav button.active{background:#143c2a}.card{background:white;border:1px solid #e2e6de;border-radius:14px;padding:18px;margin-bottom:16px;box-shadow:0 3px 14px #243a2810}h2{margin:0 0 12px;font-size:21px}h3{margin:8px 0}label{font-size:13px;font-weight:650;display:block;margin-bottom:5px}input,select{border:1px solid #bdc9bf;border-radius:7px;padding:9px;font:inherit;width:100%;background:white}input[type=number]{min-width:75px}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;align-items:end}.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:790px}th,td{border-bottom:1px solid #e8ebe5;padding:8px;text-align:left}th{background:#f1f5ee;font-size:13px;white-space:nowrap}td input,td select{padding:7px}td:nth-child(2) input{min-width:170px}.num{text-align:right;white-space:nowrap}.muted{color:#617168;font-size:13px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px}.stat{padding:14px;background:#eff5ee;border-radius:10px}.stat strong{display:block;font-size:22px;margin-top:4px}.hide{display:none}.notice{padding:12px;border-radius:9px;background:#fff5d7;margin:10px 0}.ok{background:#e1f3e7}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.check{width:18px;height:18px}.small{font-size:12px}.empty{padding:15px;color:#667}dialog{border:0;border-radius:15px;max-width:450px;width:90%;padding:25px;box-shadow:0 12px 50px #0004}dialog::backdrop{background:#0006}@media(max-width:600px){header h1{font-size:23px}.card{padding:12px}nav button{flex:1 1 auto}button{padding:10px}main{margin:12px auto}} .main-title{display:flex;align-items:center;gap:13px;flex-wrap:wrap}.main-title .flag{width:40px;height:27px;flex:none;border-radius:2px;box-shadow:0 0 0 1px #ffffff55}@media(max-width:600px){.main-title{gap:8px}.main-title .flag{width:32px;height:22px}.main-title span{font-size:20px}} </style><style id="shopping-layout">#shopping table{min-width:820px}#shopping th.grouphead{text-align:center;background:#dcebdc;font-weight:750}#shopping th.subhead{text-align:center;background:#eef5eb}#shopping th{white-space:normal}#shopping td input[type=number]{min-width:0;width:100%;max-width:110px}#shopping td input[type=text]{min-width:110px;width:100%}#shopping td:nth-child(2){min-width:175px}#shopping .tablewrap{max-height:65vh}#shopping .totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0}#shopping .totals .stat strong{font-size:19px}@media print{nav,.toolbar,#notice{display:none!important}.tablewrap{max-height:none!important;overflow:visible!important}table{min-width:0!important}input{border:0!important}}</style><style id="scroll-improvements">
+html{overflow-y:scroll;scrollbar-gutter:stable;scroll-behavior:smooth}
+body{min-height:100vh;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:20;background:#f5f5ef;padding:10px 4px;border-bottom:1px solid #d9e4d9}
+.tablewrap{max-height:62vh;overflow-y:auto;overflow-x:auto;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:#39815a #e5eee6;border:1px solid #e0e8df;border-radius:9px}
+.tablewrap thead th{position:sticky;top:0;z-index:2;background:#eaf1e8;box-shadow:0 1px 0 #cadbcb}
+.tablewrap::-webkit-scrollbar,body::-webkit-scrollbar{width:13px;height:12px}
+.tablewrap::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{background:#5b9571;border-radius:10px;border:3px solid #e5eee6}
+.tablewrap::-webkit-scrollbar-track,body::-webkit-scrollbar-track{background:#e5eee6}
+@media(max-width:600px){.tablewrap{max-height:58vh}nav{top:0}}
+</style><style id="shopping-sticky-fix">
+/* Both header levels scroll as one unit inside the same table container. */
+#shopping .tablewrap{overflow:auto;max-height:65vh;position:relative;scrollbar-gutter:stable}
+#shopping table{border-collapse:separate;border-spacing:0;min-width:900px}
+#shopping thead tr:first-child{height:42px}
+#shopping thead tr:nth-child(2){height:42px}
+#shopping thead th{box-sizing:border-box;vertical-align:middle;border-bottom:1px solid #cadbcb;white-space:normal;line-height:1.2}
+#shopping thead tr:first-child th{position:sticky;top:0;z-index:6;background:#dcebdc;height:42px}
+#shopping thead tr:nth-child(2) th{position:sticky;top:42px;z-index:5;background:#eef5eb;height:42px}
+#shopping thead tr:first-child th[rowspan="2"]{height:84px;vertical-align:middle;z-index:7}
+#shopping th,#shopping td{border-right:1px solid #e1e9e0}
+#shopping thead th{box-shadow:0 1px 0 #cadbcb}
+#shopping tbody td{background:#fff}
+#shopping tbody tr:nth-child(even) td{background:#f7faf6}
+@media(max-width:600px){#shopping .tablewrap{max-height:67vh}}
+</style><style id="recipe-compact-v11">
+#recipe .tablewrap{max-height:67vh}
+#recipe table{min-width:1070px;border-collapse:separate;border-spacing:0;font-size:12px}
+#recipe th{font-size:11px;white-space:normal;line-height:1.2}
+#recipe td{padding:5px 6px}
+#recipe td input,#recipe td select{font-size:12px;padding:6px 7px;min-width:0;width:100%}
+#recipe td:nth-child(1){min-width:150px;width:155px}
+#recipe td:nth-child(1) select{min-width:140px;width:100%;font-size:12px}
+#recipe td:nth-child(2){min-width:205px}
+#recipe td:nth-child(2) input{min-width:185px}
+#recipe td:nth-child(3){min-width:85px;width:90px}
+#recipe td:nth-child(4),#recipe td:nth-child(6){min-width:95px;width:100px}
+#recipe td:nth-child(5){min-width:110px}
+#recipe td:nth-child(7){min-width:185px}
+#recipe td:nth-child(8){min-width:75px}
+#recipe td:nth-child(8) button{padding:7px 9px;font-size:11px}
+#recipe .tablewrap thead th{position:sticky;top:0;z-index:3}
+#shopping td input[type=text]{font-size:12px}
+</style><style id="orders-compact-v15">#orders .stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}#orders .stat{padding:7px 9px;border-radius:7px;font-size:11px;line-height:1.3}#orders .stat strong{font-size:15px;margin-top:2px}#orders .tablewrap{max-height:55vh}#orders th,#orders td{font-size:12px;padding:6px}#recipe td:nth-child(5){background:#e8f5e9;font-weight:750;color:#175c37}#productionCount{border:2px solid #236947;font-weight:700}@media(max-width:750px){#orders .stats{grid-template-columns:repeat(2,minmax(0,1fr))}}</style><style id="order-remove-v17">#orders button[data-delete-order]{font-size:11px;padding:4px 7px;border-radius:5px;min-width:0;line-height:1.15}</style><style id="shopping-v20">
+#shopping tbody td{font-size:12px;line-height:1.35;padding:5px 6px}
+#shopping tbody td .muted{font-size:12px}
+#shopping tbody td input[type=text]{font-size:12px;padding:5px 6px}
+#shopping .totals{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#shopping .totals .stat{padding:10px 9px;font-size:12px;min-width:0}
+#shopping .totals .stat strong{font-size:17px;white-space:nowrap}
+@media(max-width:700px){#shopping .totals{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style><style id="print-fix">
+#printArea{display:none}
+@media print{
+ @page{size:A4 landscape;margin:11mm}
+ body{background:white!important;color:#111!important}
+ body > header,body > main{display:none!important}
+ #printArea{display:block!important;font:10px Arial,sans-serif;color:#111}
+ #printArea h1{font-size:19px;margin:0 0 7px}
+ #printArea h2{font-size:14px;margin:0 0 6px}
+ #printArea p{margin:5px 0 10px}
+ #printArea table{min-width:0!important;width:100%;border-collapse:collapse;table-layout:fixed}
+ #printArea th,#printArea td{padding:4px;border:1px solid #888;white-space:normal;overflow-wrap:anywhere;font-size:9px}
+ #printArea th{background:#e9efe8!important;color:#111!important;text-align:center}
+ #printArea th:nth-child(1){width:22%}
+ #printArea th:last-child{width:22%}
+ #printArea tr{break-inside:avoid}
+ #printArea thead{display:table-header-group}
+}
+</style></head><body>
+<header><h1 class="main-title"><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Bandera de Venezuela"><rect width="30" height="20" fill="#cf142b"/><rect width="30" height="13.333" fill="#00247d"/><rect width="30" height="6.667" fill="#ffcc00"/><g fill="white"><polygon points="7.30,10.05 7.52,10.69 8.20,10.71 7.66,11.12 7.86,11.77 7.30,11.38 6.74,11.77 6.94,11.12 6.40,10.71 7.08,10.69"/><polygon points="9.25,8.55 9.47,9.19 10.15,9.21 9.61,9.62 9.81,10.27 9.25,9.88 8.69,10.27 8.89,9.62 8.35,9.21 9.03,9.19"/><polygon points="11.90,7.60 12.12,8.24 12.80,8.26 12.26,8.67 12.46,9.32 11.90,8.93 11.34,9.32 11.54,8.67 11.00,8.26 11.68,8.24"/><polygon points="14.60,7.20 14.82,7.84 15.50,7.86 14.96,8.27 15.16,8.92 14.60,8.53 14.04,8.92 14.24,8.27 13.70,7.86 14.38,7.84"/><polygon points="17.30,7.20 17.52,7.84 18.20,7.86 17.66,8.27 17.86,8.92 17.30,8.53 16.74,8.92 16.94,8.27 16.40,7.86 17.08,7.84"/><polygon points="20.00,7.60 20.22,8.24 20.90,8.26 20.36,8.67 20.56,9.32 20.00,8.93 19.44,9.32 19.64,8.67 19.10,8.26 19.78,8.24"/><polygon points="22.65,8.55 22.87,9.19 23.55,9.21 23.01,9.62 23.21,10.27 22.65,9.88 22.09,10.27 22.29,9.62 21.75,9.21 22.43,9.19"/><polygon points="24.60,10.05 24.82,10.69 25.50,10.71 24.96,11.12 25.16,11.77 24.60,11.38 24.04,11.77 24.24,11.12 23.70,10.71 24.38,10.69"/></g></svg><span>HALLACAS CHILE – 2026</span><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Bandera de Chile"><rect width="30" height="20" fill="#d52b1e"/><rect width="30" height="10" fill="#fff"/><rect width="10" height="10" fill="#0039a6"/><path d="M5 1.6 L5.9 4 L8.5 4 L6.4 5.5 L7.2 8 L5 6.5 L2.8 8 L3.6 5.5 L1.5 4 L4.1 4 Z" fill="white"/></svg></h1><p>Tu receta, lista de compras y pedidos en un solo lugar · versión web</p></header><main><div id="notice" class="notice ok">Versión preparada para GitHub Pages: sin datos personales incorporados. Para comenzar, entra en «Guardar / respaldar» y restaura tu archivo JSON. Los cambios se guardan solo en este navegador; no se sincronizan entre dispositivos.</div><nav><button data-tab="recipe" class="active">Mi receta</button><button data-tab="shopping">Lista de compras</button><button data-tab="orders">Pedidos</button><button data-tab="backup">Guardar / respaldar</button></nav>
+<section id="recipe"><div class="card"><h2>Calculadora de hallacas y bollos · 100 unidades base</h2><div class="fields"><div><label>Receta base: 100 unidades (50 hallacas + 50 bollos)</label><input id="baseCount" type="number" min="1" readonly></div><div><label>Unidades totales a preparar (hallacas + bollos)</label><input id="productionCount" type="number" min="1"></div></div><p class="muted">Las cantidades registradas corresponden a una receta base de <strong>50 hallacas y 50 bollos</strong>. El total se actualiza al guardar pedidos. También puedes cambiarlo manualmente para simular otra producción. La columna «Necesario para producir» y la Lista de compras se recalculan automáticamente. La receta escala proporcionalmente sobre 100 unidades base.</p></div><div class="card"><div class="row" style="justify-content:space-between"><h2>Ingredientes de mi receta</h2><button id="add">+ Agregar ingrediente</button></div><div class="tablewrap"><table><thead><tr><th>Sección</th><th>Ingrediente</th><th>Unidad</th><th>Cantidad base (100 un.)</th><th>Necesario para producir</th><th>Precio unitario ($)</th><th>Observaciones</th><th>Acción</th></tr></thead><tbody id="ingredients"></tbody></table></div></div></section>
+<section id="shopping" class="hide"><div class="card"><h2>Lista de compras</h2><p class="muted">Cantidades necesarias para la producción elegida. Registra las cantidades y los importes reales pagados, junto con tus observaciones. Los datos se guardan automáticamente.</p><div class="toolbar"><button id="exportShopping">Exportar lista CSV</button><button id="downloadPrintable" class="secondary">Descargar lista para imprimir</button><button id="copyKeep" class="secondary">Copiar lista para Google Keep</button></div><div id="shoppingTotals" class="totals"></div><div class="tablewrap"><table><thead><tr><th rowspan="2">Comprado</th><th rowspan="2">Ingrediente</th><th rowspan="2">Sección</th><th colspan="2" class="grouphead">Estimados</th><th colspan="2" class="grouphead">Reales</th><th rowspan="2">Observaciones</th></tr><tr><th class="subhead">Cantidad</th><th class="subhead">Precios</th><th class="subhead">Cantidad</th><th class="subhead">Precios</th></tr></thead><tbody id="shoppingRows"></tbody></table></div></div></section>
+
+<section id="orders" class="hide"><div class="card"><h2>Pedidos de hallacas</h2><div class="fields"><div><label>Solicitante</label><input id="orderName" placeholder="Nombre"></div><div><label>Cantidad de hallacas</label><input id="orderQty" type="number" min="0" value="0"><div><label>Cantidad de bollos</label><input id="orderBollos" type="number" min="0" value="0"></div></div><div><button id="addOrder">Agregar pedido</button></div></div><p id="orderSummary"></p><div id="orderCosts" class="stats" style="margin:12px 0"></div><p class="muted">Distribución del costo unitario promedio: 60% para una hallaca y 40% para un bollo (ejemplo: $3.000 → $1.800 y $1.200). La primera fila muestra costos estimados; debajo, los costos reales registrados. La columna de pago real se actualiza desde el primer gasto real registrado (importe provisional hasta completar las compras). Los pesos 60:40 se normalizan para distribuir el 100% del gasto entre los pedidos.</p><div class="tablewrap"><table><thead><tr><th>Solicitante</th><th>Hallacas</th><th>Bollos</th><th>A pagar estimado ($)</th><th>A pagar real ($)</th><th>Acción</th></tr></thead><tbody id="orderRows"></tbody></table></div></div></section>
+<section id="backup" class="hide"><div class="card"><h2>Respaldar y recuperar tus datos</h2><p>Descarga un archivo JSON con tu receta, cantidades y precios reales, observaciones y pedidos. Puedes recuperarlo después en este mismo programa.</p><div class="toolbar"><button id="exportJSON">Descargar respaldo JSON</button><button id="importJSON" class="secondary">Restaurar respaldo JSON</button><input id="jsonFile" type="file" accept=".json,application/json" class="hide"></div><div id="importStatus" class="notice">La restauración reemplazará los datos actuales, pero antes se descargará una copia de seguridad.</div></div><div class="card"><h2>Importar y exportar ingredientes CSV</h2><p class="muted">Para editar masivamente en Excel. Mantén las columnas ID, Ingrediente, Sección, Unidad, Cantidad, Precio unitario, Observaciones. Los ID existentes conservan el historial de compras.</p><div class="toolbar"><button id="exportCSV">Exportar ingredientes CSV</button><button id="importCSV" class="secondary">Importar ingredientes CSV</button><input id="csvFile" type="file" accept=".csv,text/csv" class="hide"></div></div></section>
+<dialog id="confirmDialog"><h2 id="confirmTitle">Confirmar</h2><p id="confirmText"></p><div class="toolbar"><button id="confirmYes" class="danger">Sí, continuar</button><button id="confirmNo" class="secondary">Cancelar</button></div></dialog></main><script>
+'use strict';
+const INITIAL={"count":100,"baseCount":100,"items":[],"purchases":[],"real":{},"orders":[],"checked":{}};
+const KEY='hallacas-chile-2026-github-public-v1';
+const $=id=>document.getElementById(id);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const safe=(s)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const formatInput=n=>new Intl.NumberFormat('es-CL',{maximumFractionDigits:3}).format(Number(n)||0);
+const parseInput=s=>{const t=String(s??'').trim().replace(/\s/g,'');if(!t)return 0;const v=t.includes(',')?Number(t.replace(/\./g,'').replace(',','.')):Number(t.replace(/\./g,''));return Number.isFinite(v)?v:NaN};
+const fmt=n=>new Intl.NumberFormat('es-CL',{maximumFractionDigits:3}).format(Number(n)||0);
+const money=n=>'$'+new Intl.NumberFormat('es-CL',{maximumFractionDigits:0}).format(Number(n)||0);
+function normalize(d){if(!d||!Array.isArray(d.items))throw Error('El archivo no contiene una lista de ingredientes válida');return {count:Math.max(1,Number(d.count)||100),baseCount:100,items:d.items.map((x,i)=>({id:String(x.id??'nuevo-'+i),name:String(x.name??''),section:String(x.section??'Otros'),unit:String(x.unit??'Unidad'),baseQty:Number(x.baseQty)||0,price:Number(x.price)||0,notes:String(x.notes??'')})),purchases:Array.isArray(d.purchases)?d.purchases:[],real:d.real&&typeof d.real==='object'?d.real:{},orders:Array.isArray(d.orders)?d.orders.map(o=>({...o,bollos:Math.max(0,Number(o.bollos)||0)})):[],checked:d.checked&&typeof d.checked==='object'?d.checked:{}}}
+let state;try{const saved=localStorage.getItem(KEY);state=normalize(saved?JSON.parse(saved):INITIAL)}catch(e){state=normalize(INITIAL)}
+function save(){syncProduction();try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){show('No se pudo guardar en el navegador. Descarga un respaldo JSON.',true)}}
+function show(msg,bad=false){$('notice').textContent=msg;$('notice').className='notice '+(bad?'':'ok')}
+function download(name,text,type){const blob=new Blob([text],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500)}
+function backup(){download('Hallacas_2026_Respaldo_Completo.json',JSON.stringify({app:'Hallacas Chile 2026',version:8,data:state},null,2),'application/json;charset=utf-8')}
+function confirmAction(title,msg,action){$('confirmTitle').textContent=title;$('confirmText').textContent=msg;const d=$('confirmDialog');$('confirmYes').onclick=()=>{d.close();action()};$('confirmNo').onclick=()=>d.close();if(typeof d.showModal==='function')d.showModal();else {d.setAttribute('open','');$('confirmNo').onclick=()=>d.removeAttribute('open');$('confirmYes').onclick=()=>{d.removeAttribute('open');action()}}}
+function orderedUnits(){return state.orders.reduce((s,o)=>s+Math.max(0,Number(o.qty)||0)+Math.max(0,Number(o.bollos)||0),0)}
+function syncProduction(){state.baseCount=100;state.count=Math.max(1,Number(state.count)||100)}
+function syncFromOrders(){const n=orderedUnits();state.count=n>0?n:100}
+function realCost(){return state.items.reduce((s,x)=>s+(Number(state.real[x.id]?.price)||0),0)}
+function orderPrices(kind='real'){
+ const total=kind==='real'?realCost():estimatedCost();
+ const h=state.orders.reduce((v,o)=>v+(Number(o.qty)||0),0),b=state.orders.reduce((v,o)=>v+(Number(o.bollos)||0),0);
+ const units=h+b||state.count, weighted=h*.6+b*.4;
+ const avg=total/Math.max(1,units);
+ // 60:40 are relative weights. Normalize to recover the entire expense across all orders.
+ const hallaca=weighted>0?total*.6/weighted:avg*.6;
+ const bollo=weighted>0?total*.4/weighted:avg*.4;
+ return {total,avg,hallaca,bollo}
+}
+function estimatedCost(){return state.items.reduce((t,x)=>t+x.baseQty*ratio()*x.price,0)}
+function costCards(){const estimated=orderPrices('estimated'),real=orderPrices('real');const filled=state.items.filter(x=>state.real[x.id]?.price!==undefined&&state.real[x.id]?.price!=='').length;const complete=filled===state.items.length;return `<div style="grid-column:1/-1;font-weight:700">ESTIMADOS</div><div class="stat">Costo estimado total<strong>${money(estimated.total)}</strong></div><div class="stat">Costo estimado por unidad<strong>${money(estimated.avg)}</strong></div><div class="stat">Hallaca estimada (60%)<strong>${money(estimated.hallaca)}</strong></div><div class="stat">Bollo estimado (40%)<strong>${money(estimated.bollo)}</strong></div><div style="grid-column:1/-1;font-weight:700;margin-top:8px">REALES — ${filled} precios registrados (provisional mientras falten compras)</div><div class="stat">Costo real registrado<strong>${filled?money(real.total):'Pendiente'}</strong></div><div class="stat">Costo real por unidad<strong>${filled?money(real.avg):'Pendiente'}</strong></div><div class="stat">Hallaca real (60%)<strong>${filled?money(real.hallaca):'Pendiente'}</strong></div><div class="stat">Bollo real (40%)<strong>${filled?money(real.bollo):'Pendiente'}</strong></div>`}
+function ratio(){return (Number(state.count)||100)/100}
+function render(){ syncProduction(); $('baseCount').value=state.baseCount;$('productionCount').value=state.count;const sorted=[...state.items].sort((a,b)=>a.name.localeCompare(b.name,'es'));$('ingredients').innerHTML=sorted.map(x=>`<tr data-id="${safe(x.id)}"><td><select data-field="section">${['Carnes','Caldo','Guiso','Masa','Adornos','Otros',x.section].filter((v,i,a)=>a.indexOf(v)===i).map(v=>`<option ${v===x.section?'selected':''}>${safe(v)}</option>`).join('')}</select></td><td><input data-field="name" value="${safe(x.name)}"></td><td><input data-field="unit" value="${safe(x.unit)}"></td><td><input data-field="baseQty" type="text" inputmode="decimal" value="${formatInput(x.baseQty)}"></td><td class="num">${fmt(x.baseQty*ratio())} ${safe(x.unit)}</td><td><input data-field="price" type="text" inputmode="decimal" value="${formatInput(x.price)}"></td><td><input data-field="notes" type="text" value="${safe(x.notes||'')}" placeholder="Observaciones"></td><td><button class="danger" data-remove="${safe(x.id)}">Quitar</button></td></tr>`).join('');$('shoppingRows').innerHTML=sorted.map(x=>{const r=state.real[x.id]||{};return `<tr data-real-id="${safe(x.id)}"><td><input class="check" type="checkbox" data-check="${safe(x.id)}" ${state.checked[x.id]?'checked':''}></td><td>${safe(x.name)} <span class="muted">(${safe(x.unit)})</span></td><td>${safe(x.section)}</td><td class="num">${fmt(x.baseQty*ratio())} ${safe(x.unit)}</td><td class="num">${money(x.baseQty*ratio()*x.price)}</td><td><input aria-label="Cantidad real de ${safe(x.name)}" type="text" inputmode="decimal" data-real-field="qty" value="${r.qty===''||r.qty===undefined?'':formatInput(r.qty)}" placeholder="Cantidad"></td><td><input aria-label="Precio real de ${safe(x.name)}" type="text" inputmode="decimal" data-real-field="price" value="${r.price===''||r.price===undefined?'':formatInput(r.price)}" placeholder="$ total"></td><td><input aria-label="Observaciones de ${safe(x.name)}" type="text" data-real-field="notes" value="${safe(r.notes||'')}" placeholder="Observaciones"></td></tr>`}).join('');updateShoppingTotals();const prices=orderPrices('estimated'),realPrices=orderPrices('real'),hasActual=state.items.some(x=>state.real[x.id]?.price!==undefined&&state.real[x.id]?.price!=='');$('orderRows').innerHTML=state.orders.map((o,i)=>`<tr><td><input data-order-field="name" data-order-index="${i}" value="${safe(o.name)}" aria-label="Nombre del solicitante"></td><td><input type="number" min="1" step="1" data-order-field="qty" data-order-index="${i}" value="${Number(o.qty)||0}" aria-label="Cantidad de hallacas"></td><td><input type="number" min="0" step="1" data-order-field="bollos" data-order-index="${i}" value="${Number(o.bollos)||0}" aria-label="Cantidad de bollos"></td><td class="num">${money((Number(o.qty)||0)*prices.hallaca+(Number(o.bollos)||0)*prices.bollo)}</td><td class="num">${hasActual?money((Number(o.qty)||0)*realPrices.hallaca+(Number(o.bollos)||0)*realPrices.bollo):'<span class="muted">Pendiente</span>'}</td><td><button class="danger" data-delete-order="${i}">Quitar</button></td></tr>`).join('')||'<tr><td colspan="6">Sin pedidos.</td></tr>';$('orderSummary').textContent='Total solicitado: '+fmt(state.orders.reduce((s,o)=>s+(Number(o.qty)||0),0))+' hallacas y '+fmt(state.orders.reduce((s,o)=>s+(Number(o.bollos)||0),0))+' bollos · '+fmt(orderedUnits())+' unidades a elaborar';$('orderCosts').innerHTML=costCards();}
+function changeItem(e){const tr=e.target.closest('tr[data-id]');if(!tr||!e.target.dataset.field)return;const x=state.items.find(z=>z.id===tr.dataset.id);if(!x)return;const f=e.target.dataset.field;x[f]=['baseQty','price'].includes(f)?Math.max(0,parseInput(e.target.value)||0):e.target.value;save();if(e.type==='change'){if(['baseQty','price'].includes(f))e.target.value=formatInput(x[f]);render()}else if(['baseQty','price'].includes(f)){const cell=tr.children[4];cell.textContent=fmt(x.baseQty*ratio())+' '+x.unit}}
+$('ingredients').addEventListener('input',changeItem);$('ingredients').addEventListener('change',changeItem);
+$('ingredients').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;const x=state.items.find(z=>z.id===b.dataset.remove);if(!x)return;confirmAction('Quitar ingrediente','¿Eliminar «'+x.name+'» de la receta? Las compras históricas se conservarán.',()=>{state.items=state.items.filter(z=>z.id!==x.id);delete state.checked[x.id];save();render();show('Ingrediente eliminado: '+x.name)})});
+$('add').onclick=()=>{const id='ing-'+Date.now()+'-'+Math.floor(Math.random()*10000);state.items.push({id,name:'Nuevo ingrediente',section:'Otros',unit:'Unidad',baseQty:0,price:0,notes:''});save();render();const input=[...document.querySelectorAll('#ingredients tr')].find(tr=>tr.dataset.id===id)?.querySelector('[data-field="name"]');if(input){input.focus();input.select()}show('Ingrediente agregado. Edita su nombre, unidad y cantidad directamente en la tabla.')};
+$('productionCount').readOnly=false; $('productionCount').title='Cambia el total para escalar la receta; al guardar pedidos se actualizará según su suma';
+$('productionCount').addEventListener('input',e=>{const n=Number(e.target.value);if(!Number.isInteger(n)||n<1){show('Introduce un total válido mayor que cero.',true);e.target.value=state.count;return}state.count=n;save();updateProductionDisplays();show('Receta ajustada a '+fmt(n)+' unidades (factor '+fmt(n/100)+').')});
+function updateProductionDisplays(){
+ document.querySelectorAll('#ingredients tr[data-id]').forEach(tr=>{
+  const item=state.items.find(x=>x.id===tr.dataset.id);
+  if(item)tr.children[4].textContent=fmt(item.baseQty*ratio())+' '+item.unit;
+ });
+ document.querySelectorAll('#shoppingRows tr[data-real-id]').forEach(tr=>{
+  const item=state.items.find(x=>x.id===tr.dataset.realId);
+  if(item){tr.children[3].textContent=fmt(item.baseQty*ratio())+' '+item.unit;tr.children[4].textContent=money(item.baseQty*ratio()*item.price)}
+ });
+ updateShoppingTotals();updateOrderCostsOnly();
+}
+function updateOrderCostsOnly(){
+ $('orderCosts').innerHTML=costCards();
+ const ep=orderPrices('estimated'),rp=orderPrices('real');
+ const complete=state.items.some(x=>state.real[x.id]?.price!==undefined&&state.real[x.id]?.price!=='');
+ const rows=$('orderRows').querySelectorAll('tr');
+ state.orders.forEach((o,i)=>{
+  if(rows[i]?.children[3])rows[i].children[3].textContent=money((Number(o.qty)||0)*ep.hallaca+(Number(o.bollos)||0)*ep.bollo);
+  if(rows[i]?.children[4])rows[i].children[4].textContent=complete?money((Number(o.qty)||0)*rp.hallaca+(Number(o.bollos)||0)*rp.bollo):'Pendiente';
+ });
+}
+function updateShoppingTotals(){const estimated=state.items.reduce((t,x)=>t+x.baseQty*ratio()*x.price,0);const actual=state.items.reduce((t,x)=>t+(Number(state.real[x.id]?.price)||0),0);const filled=state.items.filter(x=>state.real[x.id]?.price!==undefined&&state.real[x.id]?.price!=='').length;$('shoppingTotals').innerHTML=`<div class="stat">Costo estimado<strong>${money(estimated)}</strong></div><div class="stat">Gasto real registrado<strong>${money(actual)}</strong></div><div class="stat">Dif. real - est.<strong>${money(actual-estimated)}</strong></div><div class="stat">Precios reales ingresados<strong>${filled} / ${state.items.length}</strong></div>`}
+$('shoppingRows').addEventListener('input',e=>{const tr=e.target.closest('[data-real-id]');if(!tr||!e.target.dataset.realField)return;const id=tr.dataset.realId;state.real[id]??={};const f=e.target.dataset.realField;state.real[id][f]=f==='notes'?e.target.value:(e.target.value===''?'':Math.max(0,parseInput(e.target.value)||0));save();updateShoppingTotals();updateOrderCostsOnly()});
+$('shoppingRows').addEventListener('change',e=>{if(e.target.dataset.check){state.checked[e.target.dataset.check]=e.target.checked;save()}});
+// Aplicar separador de miles al terminar la edición, sin interrumpir la escritura.
+$('shoppingRows').addEventListener('focusout',e=>{const field=e.target.dataset.realField;if(field!=='qty'&&field!=='price')return;const tr=e.target.closest('[data-real-id]');if(!tr)return;const val=state.real[tr.dataset.realId]?.[field];e.target.value=val===''||val===undefined?'':formatInput(val)});
+$('addOrder').onclick=()=>{const name=$('orderName').value.trim(),qty=Number($('orderQty').value),bollos=Number($('orderBollos').value);if(!name||!Number.isInteger(qty)||qty<0||!Number.isInteger(bollos)||bollos<0||qty+bollos<1){show('Indica nombre y al menos una hallaca o un bollo.',true);return}state.orders.push({name,qty,bollos});syncFromOrders();save();render();$('orderName').value='';$('orderQty').value='0';$('orderBollos').value='0'};
+$('orderRows').addEventListener('click',e=>{const edit=e.target.closest('[data-edit-order]');if(edit){const i=Number(edit.dataset.editOrder),tr=edit.closest('tr'),name=tr.querySelector('[data-order-field=name]').value.trim(),qty=Number(tr.querySelector('[data-order-field=qty]').value),bollos=Number(tr.querySelector('[data-order-field=bollos]').value);if(!name||!Number.isInteger(qty)||qty<0||!Number.isInteger(bollos)||bollos<0||qty+bollos<1){show('Indica un nombre y una cantidad válida.',true);return}state.orders[i]={...state.orders[i],name,qty,bollos};syncFromOrders();save();render();show('Pedido actualizado.');return}const b=e.target.closest('[data-delete-order]');if(!b)return;confirmAction('Eliminar pedido','¿Eliminar este pedido?',()=>{state.orders.splice(Number(b.dataset.deleteOrder),1);syncFromOrders();save();render()})});
+$('orderRows').addEventListener('change',e=>{
+ const field=e.target.dataset.orderField;
+ if(!field)return;
+ const i=Number(e.target.dataset.orderIndex),order=state.orders[i];
+ if(!order)return;
+ const value=field==='name'?e.target.value.trim():Number(e.target.value);
+ if(field==='name'&&!value){show('El solicitante debe tener un nombre.',true);render();return}
+ if(field!=='name'&&(!Number.isInteger(value)||value<0)){show('Introduce una cantidad válida.',true);render();return}
+ const next={...order,[field]:value};
+ if(Number(next.qty)+Number(next.bollos)<1){show('El pedido debe tener al menos una unidad.',true);render();return}
+ state.orders[i]=next;syncFromOrders();save();render();show('Pedido actualizado automáticamente.');
+});
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function csvDownload(name,rows){download(name,'\ufeff'+rows.map(row=>row.map(csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8')}
+
+function printableShoppingHTML(){
+  const sorted=[...state.items].sort((a,b)=>a.name.localeCompare(b.name,'es'));
+  const estimated=sorted.reduce((v,x)=>v+x.baseQty*ratio()*x.price,0);
+  const actual=sorted.reduce((v,x)=>v+(Number(state.real[x.id]?.price)||0),0);
+  const rows=sorted.map(x=>{
+    const r=state.real[x.id]||{};
+    return `<tr><td class="check"></td><td>${safe(x.name)}</td><td>${safe(x.section)}</td><td class="num">${fmt(x.baseQty*ratio())} ${safe(x.unit)}</td><td class="num">${money(x.baseQty*ratio()*x.price)}</td><td class="num">${r.qty==null||r.qty===''?'':fmt(r.qty)+' '+safe(x.unit)}</td><td class="num">${r.price==null||r.price===''?'':money(r.price)}</td><td>${safe(r.notes||'')}</td></tr>`;
+  }).join('');
+  return `<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Hallacas Chile 2026 - Lista de compras</title>
+  <style>
+  *{box-sizing:border-box}body{font:12px Arial,sans-serif;color:#18251b;background:white;margin:15px}
+  h1{font-size:22px;margin:0 0 5px}h2{font-size:16px;margin:0 0 7px}
+  p{margin:5px 0 9px}.actions{margin:12px 0;padding:12px;background:#eaf3eb}
+  button{font:600 14px Arial;padding:10px 18px;background:#236947;color:white;border:0;border-radius:6px;cursor:pointer}
+  table{width:100%;border-collapse:collapse;table-layout:fixed}
+  th,td{border:1px solid #777;padding:5px 4px;overflow-wrap:anywhere;font-size:10px}
+  th{background:#e6efe5;text-align:center}td.num{text-align:right}
+  th:nth-child(1){width:4%}th:nth-child(2){width:22%}th:nth-child(3){width:11%}th:last-child{width:20%}
+  td.check{height:25px}thead{display:table-header-group}tr{break-inside:avoid}
+  @page{size:A4 landscape;margin:10mm}
+  @media print{body{margin:0}.actions{display:none!important}th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  </style></head><body><div class="actions"><button onclick="window.print()">Imprimir esta lista</button> &nbsp; Si no aparece el diálogo, utiliza Ctrl+P (Windows) o Cmd+P (Mac).</div>
+  <h1>HALLACAS CHILE – 2026</h1><h2>Lista de compras</h2>
+  <p>Producción: ${fmt(state.count)} unidades (hallacas + bollos). Receta base: 100 unidades.</p>
+  <p><strong>Total estimado: ${money(estimated)}</strong> &nbsp; | &nbsp; <strong>Total real registrado: ${money(actual)}</strong></p>
+  <table><thead><tr><th rowspan="2">✓</th><th rowspan="2">Ingrediente</th><th rowspan="2">Sección</th><th colspan="2">Estimados</th><th colspan="2">Reales</th><th rowspan="2">Observaciones</th></tr>
+  <tr><th>Cantidad</th><th>Precio</th><th>Cantidad</th><th>Precio</th></tr></thead><tbody>${rows}</tbody></table></body></html>`;
+}
+function downloadPrintableShopping(){
+  download('Hallacas_2026_Lista_de_Compras_Imprimible.html',printableShoppingHTML(),'text/html;charset=utf-8');
+}
+function printShoppingList(){
+  // Se prepara el documento antes de abrir la impresión.
+  const html=printableShoppingHTML();
+  let frame=document.getElementById('shoppingPrintFrame');
+  if(frame)frame.remove();
+  frame=document.createElement('iframe');
+  frame.id='shoppingPrintFrame';
+  frame.setAttribute('title','Lista de compras para imprimir');
+  frame.style.cssText='position:fixed;right:0;bottom:0;width:1px;height:1px;border:0;opacity:0;pointer-events:none';
+  document.body.appendChild(frame);
+  let printed=false;
+  frame.onload=()=>{
+    if(printed)return;
+    printed=true;
+    try{frame.contentWindow.focus();frame.contentWindow.print()}
+    catch(e){show('No se pudo abrir la impresión. Utiliza «Descargar lista para imprimir».',true)}
+  };
+  frame.srcdoc=html;
+  show('Lista preparada. Si no aparece el diálogo, usa «Descargar lista para imprimir» y abre el archivo en Chrome.');
+}
+$('downloadPrintable').onclick=downloadPrintableShopping;
+function keepShoppingText(){
+ const items=[...state.items].sort((a,b)=>a.name.localeCompare(b.name,'es'));
+ return 'HALLACAS CHILE 2026 - LISTA DE COMPRAS\nProducción: '+fmt(state.count)+' unidades (hallacas y bollos)\n\n'+items.map(x=>{
+  const amount=fmt(x.baseQty*ratio())+' '+x.unit;
+  return '☐ '+x.name+' — '+amount+(x.notes?' ('+x.notes+')':'');
+ }).join('\n');
+}
+$('copyKeep').onclick=async()=>{
+ const content=keepShoppingText();
+ try{
+  if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(content)}
+  else{
+   const el=document.createElement('textarea');el.value=content;el.style.cssText='position:fixed;left:0;top:0;width:1px;height:1px;opacity:0';document.body.appendChild(el);el.focus();el.select();const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('No se pudo copiar automáticamente');
+  }
+  show('Lista copiada: abre Google Keep, crea una nota y pega el contenido.');
+ }catch(e){
+  download('Hallacas_2026_Lista_para_Keep.txt',content,'text/plain;charset=utf-8');
+  show('Tu navegador no permitió copiar. Se descargó un archivo de texto para pegarlo en Google Keep.');
+ }
+};
+
+$('exportShopping').onclick=()=>csvDownload('Hallacas_Lista_de_Compras.csv',[['Ingrediente','Sección','Cantidad estimada','Unidad','Precio estimado total CLP','Cantidad real','Precio real total CLP','Observaciones'],...state.items.map(x=>[x.name,x.section,x.baseQty*ratio(),x.unit,x.baseQty*ratio()*x.price,state.real[x.id]?.qty??'',state.real[x.id]?.price??'',state.real[x.id]?.notes??''])]);
+$('exportJSON').onclick=backup;$('importJSON').onclick=()=>$('jsonFile').click();
+$('jsonFile').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{const raw=JSON.parse(await f.text()),incoming=normalize(raw.data??raw);confirmAction('Restaurar respaldo','Se encontraron '+incoming.items.length+' ingredientes para una receta base de 100 unidades. ¿Reemplazar los datos actuales? Se descargará un respaldo de seguridad antes.',()=>{backup();state=incoming;save();render();$('importStatus').textContent='Respaldo restaurado correctamente: '+state.items.length+' ingredientes.';show('¡Receta recuperada! '+state.items.length+' ingredientes cargados.')})}catch(err){$('importStatus').textContent='No se pudo importar: '+err.message;show('Error al restaurar JSON: '+err.message,true)}});
+$('exportCSV').onclick=()=>csvDownload('Hallacas_Ingredientes.csv',[['ID','Ingrediente','Sección','Unidad','Cantidad','Precio unitario','Observaciones'],...state.items.map(x=>[x.id,x.name,x.section,x.unit,x.baseQty,x.price,x.notes||''])]);$('importCSV').onclick=()=>$('csvFile').click();
+function parseCSV(s){s=s.replace(/^\ufeff/,'');const first=s.split(/\r?\n/)[0]||'';const sep=(first.match(/;/g)||[]).length>=(first.match(/,/g)||[]).length?';':',';let rows=[],row=[],cell='',quoted=false;for(let i=0;i<s.length;i++){let c=s[i];if(c==='"'){if(quoted&&s[i+1]==='"'){cell+='"';i++}else quoted=!quoted}else if(c===sep&&!quoted){row.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&s[i+1]==='\n')i++;row.push(cell);if(row.some(v=>v.trim()))rows.push(row);row=[];cell=''}else cell+=c}row.push(cell);if(row.some(v=>v.trim()))rows.push(row);return rows}
+$('csvFile').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{const rows=parseCSV(await f.text()),h=rows.shift().map(x=>x.trim().toLowerCase()),col=n=>h.indexOf(n);if(col('ingrediente')<0||col('cantidad')<0)throw Error('Faltan columnas Ingrediente o Cantidad');const items=rows.map((r,i)=>({id:r[col('id')]||'csv-'+Date.now()+'-'+i,name:r[col('ingrediente')]||'',section:r[col('sección')]||'Otros',unit:r[col('unidad')]||'Unidad',baseQty:Number((r[col('cantidad')]||'0').replace(',','.'))||0,price:Number((r[col('precio unitario')]||'0').replace(',','.'))||0,notes:r[col('observaciones')]||''})).filter(x=>x.name.trim());if(!items.length)throw Error('No hay ingredientes válidos');confirmAction('Importar CSV','Se importarán '+items.length+' ingredientes. La receta actual será reemplazada, pero las compras y pedidos permanecerán. ¿Continuar?',()=>{backup();state.items=items;save();render();show('CSV importado: '+items.length+' ingredientes.')})}catch(err){show('Error al importar CSV: '+err.message,true)}});
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x===b));for(const id of ['recipe','shopping','orders','backup'])$(id).classList.toggle('hide',id!==b.dataset.tab)});
+render();
+</script></body></html>
